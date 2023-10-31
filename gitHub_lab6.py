@@ -17,7 +17,13 @@ def encode(password):
     return encoded_password
 
 # decode function done by lab partner, Aadithi Arjun
-
+def decode(password):
+    decoded_password =" "
+    # loop through the digits in the string password input by user
+    for digit in str(password):
+        new_password = int(digit) - 3               # convert characters in string password to integers & add 3 to each
+        decoded_password += str(new_password)
+    return decoded_password
 if __name__ == '__main__':
 
     run = True
