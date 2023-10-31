@@ -1,7 +1,7 @@
 '''
 	Author: Isabella Marin
 	Lab Partner: Aadithi Arjun
-	lab6_githubdemo.py
+	gitHub_lab6.py
 	Paired-programming to learn how to use git
 '''
 
@@ -38,9 +38,10 @@ if __name__ == '__main__':
             print("Your password has been encoded and stored!")
 
         if choice == 2:
-            # validate that there is a password that was encoded to display encoded and original password
-            if password is not None:
-                print(f"The encoded password is {encoded_password}, and the original password is {password}.")
+            # validate that there was an encoded password to display encoded and original password
+            if encoded_password is not None:
+                decoded_password = decode(encoded_password)
+                print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
 
         if choice == 3:
             break        # exits program; breaks out of loop
